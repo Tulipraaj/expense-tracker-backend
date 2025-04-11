@@ -13,15 +13,15 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    private User register(User user){
+    public User register(User user){
         return userRepository.save(user);
     }
 
-    private Optional<User> getByUsername(String username){
+    public Optional<User> getByUsername(String username){
         return userRepository.findByUsername(username);
     }
 
-    private Optional<User> getByEmail(String email){
+    public Optional<User> getByEmail(String email){
         return userRepository.findByEmail(email);
     }
 
